@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Badak</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#101010;
+  color:white;
+  font-family:Arial,sans-serif;
+}
+header{
+  background:#173f32;
+  padding:20px;
+  text-align:center;
+}
+header h2{margin:0;color:#7dffb0}
+main{padding:20px}
+.card{
+  background:#202020;
+  padding:16px;
+  border-radius:12px;
+  margin-bottom:14px;
+}
+button{
+  background:#16865a;
+  color:white;
+  border:0;
+  border-radius:8px;
+  padding:12px;
+  width:100%;
+  font-size:16px;
+}
+input{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:0;
+  margin:10px 0;
+}
+small{color:#aaa}
+</style>
+</head>
+<body>
+<header>
+  <h2>🐂 WHATSAPP BADAK</h2>
+  <p>Panel perlindungan dan pengaturan</p>
+</header>
+<main>
+  <div class="card">
+    <h3>🛡️ Perlindungan Spam</h3>
+    <p>Kelola pengaturan perlindungan spam di perangkatmu.</p>
+    <button onclick="alert('Gunakan fitur blokir dan laporkan spam di WhatsApp resmi.')">
+      Info Perlindungan
+    </button>
+  </div>
+
+  <div class="card">
+    <h3>⚙️ Pengaturan</h3>
+    <label>Nama pengguna</label>
+    <input id="nama" placeholder="Masukkan nama">
+    <button onclick="simpan()">Simpan Nama</button>
+    <p id="hasil"></p>
+  </div>
+
+  <div class="card">
+    <h3>💬 WhatsApp Resmi</h3>
+    <p>Buka WhatsApp untuk melanjutkan percakapan.</p>
+    <button onclick="location.href='https://wa.me/'">
+      Buka WhatsApp
+    </button>
+  </div>
+  <small>WhatsApp Badak — antarmuka awal proyek.</small>
+</main>
+<script>
+function simpan(){
+  const nama=document.getElementById('nama').value.trim();
+  if(!nama){
+    alert('Masukkan nama terlebih dahulu.');
+    return;
+  }
+  document.getElementById('hasil').textContent=
+    'Nama tersimpan untuk sesi ini: '+nama;
+}
+</script>
+</body>
+</html>
